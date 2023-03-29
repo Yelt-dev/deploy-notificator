@@ -2,7 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const ejs = require('ejs');
 const fs = require('fs');
-const {dataConfig} = require('./config/data.config');
+const {dataConfig} = require('./config/frontend/data.config');
 const { mailList } = require('./config/frontend/mail.list.config')
 
 const app = express();
