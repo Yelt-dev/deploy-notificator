@@ -9,7 +9,6 @@ const app = express();
 
 const server = app.listen(0, () =>{
     console.log(`Email sender listening on port ${server.address().port}`);
-    console.log(__dirname);
     const emailTemplate = fs.readFileSync(__dirname+'/templates/emailTemplate.ejs', 'utf8');
 
     const renderedTemplate = ejs.render(emailTemplate, {
