@@ -6,9 +6,9 @@ La idea es ejecutar el script dentro de un .sh que tambien ejecute el deploy, pa
 
 ## Antes de comenzar
 Se necesitan modificar los archivos siguientes: `/src/config/frontend/data.config.js` y `/src/config/frontend/mail.list.config.js`.
-como ejemplo se uso la ruta de `frontend` pero igual existe la ruta de backend es la misma configuración.
+Como ejemplo se uso la ruta de `frontend` pero igual existe la ruta de backend es la misma configuración.
 La estructura de `data.config.js` es la siguiente:
-```
+```javascript
 exports.dataConfig = {
     email_sender:"", // email desde donde se enviaran las notificaciones
     name_sender: "", // nombre de la persona que hace el deploy
@@ -18,7 +18,7 @@ exports.dataConfig = {
 }
 ```
 y la estructura de `mail.list.config.js` es:
-```
+```javascript
 // Arreglo de strings donde iran los correos a los que se enviaran
 exports.mailList = [
     '', //example@outlook.com
