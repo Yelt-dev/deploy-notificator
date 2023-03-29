@@ -5,7 +5,8 @@ Recibir notificaciones por email cada vez que se ejecute un deploy en un servido
 La idea es ejecutar el script dentro de un .sh que tambien ejecute el deploy, para poder enviar las notificaciones despues de hacer el deploy.
 
 ## Antes de comenzar
-Se necesitan modificar los archivos siguientes: `/src/config/data.config.js` y `/src/config/mail.list.config.js`.
+Se necesitan modificar los archivos siguientes: `/src/config/frontend/data.config.js` y `/src/config/frontend/mail.list.config.js`.
+como ejemplo se uso la ruta de `frontend` pero igual existe la ruta de backend es la misma configuración.
 La estructura de `data.config.js` es la siguiente:
 ```
 exports.dataConfig = {
