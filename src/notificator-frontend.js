@@ -29,7 +29,7 @@ const server = app.listen(0, () =>{
    const mailOptions = {
         from: `${dataConfig.name_sender} <${dataConfig.email_sender}>`,
         to: mailList,
-        subject: `[Nuevo Deploy] ${dataConfig.app_deploy_name} ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
+        subject: `[Nuevo Frontend Deploy] ${dataConfig.app_deploy_name} ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
         html: renderedTemplate
     };
 
