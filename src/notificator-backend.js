@@ -2,8 +2,8 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const ejs = require('ejs');
 const fs = require('fs');
-const {dataConfig} = require('./config/frontend/data.config');
-const { mailList } = require('./config/frontend/mail.list.config')
+const {dataConfig} = require('./config/backend/data.config');
+const { mailList } = require('./config/backend/mail.list.config')
 
 const app = express();
 
@@ -29,7 +29,7 @@ const server = app.listen(0, () =>{
    const mailOptions = {
         from: `${dataConfig.name_sender} <${dataConfig.email_sender}>`,
         to: mailList,
-        subject: `[Nueva version de aplicación en Frontend] ${dataConfig.app_deploy_name} ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
+        subject: `[Nueva version de aplicación en Backend] ${dataConfig.app_deploy_name} ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
         html: renderedTemplate
     };
 
