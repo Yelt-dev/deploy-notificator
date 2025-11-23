@@ -1,19 +1,31 @@
 {
   "name": "deploy-notificator",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Send email notifications for application deployments with git information",
+  "main": "src/notificator.js",
+  "bin": {
+    "deploy-notify": "./src/notificator.js"
+  },
   "scripts": {
+    "notify:frontend": "node src/notificator.js --type frontend",
+    "notify:backend": "node src/notificator.js --type backend",
+    "notify:frontend:dry": "node src/notificator.js --type frontend --dry-run",
+    "notify:backend:dry": "node src/notificator.js --type backend --dry-run",
+    "verify": "node src/notificator.js --verify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "deployment",
+    "notification",
+    "email",
+    "git",
+    "devops"
+  ],
   "author": "Yeltsin Lopez",
   "license": "ISC",
   "dependencies": {
-    "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
-    "express": "^4.18.2",
     "nodemailer": "^6.9.1"
   }
 }
